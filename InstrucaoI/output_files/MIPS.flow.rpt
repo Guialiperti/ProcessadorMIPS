@@ -1,5 +1,5 @@
 Flow report for MIPS
-Tue Oct 22 15:41:45 2019
+Thu Oct 24 15:44:26 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 22 15:41:45 2019       ;
+; Flow Status                        ; Flow Failed - Thu Oct 24 15:44:26 2019      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MIPS                                        ;
-; Top-level Entity Name              ; ula                                         ;
+; Top-level Entity Name              ; MIPS                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 65 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 65 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 97 / 529 ( 18 % )                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/22/2019 15:36:45 ;
+; Start date & time ; 10/24/2019 15:44:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -75,18 +75,21 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 5307246322711.157176940503583          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 163580567895051.157194265806003        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ULA         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ULA         ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ULA         ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; ULA                                    ; MIPS          ; --          ; --             ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993     ; --          ; --             ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -95,16 +98,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 964 MB              ; 00:00:22                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 1710 MB             ; 00:00:12                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 826 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.0                     ; 921 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 1063 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 1051 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 1058 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 1051 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 1058 MB             ; 00:00:00                           ;
-; Total                ; 00:01:34     ; --                      ; --                  ; 00:00:39                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 955 MB              ; 00:00:20                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,14 +109,6 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
 ; Analysis & Synthesis ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Fitter               ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Assembler            ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Timing Analyzer      ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; arqcomp-0x00     ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -129,14 +116,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
-quartus_fit --read_settings_files=off --write_settings_files=off MIPS -c MIPS
-quartus_asm --read_settings_files=off --write_settings_files=off MIPS -c MIPS
-quartus_sta MIPS -c MIPS
-quartus_eda --read_settings_files=off --write_settings_files=off MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=/home/arqcomp/Documents/ProcessadorMIPS/Waveform.vwf --testbench_file=/home/arqcomp/Documents/ProcessadorMIPS/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/arqcomp/Documents/ProcessadorMIPS/simulation/qsim/ MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=/home/arqcomp/Documents/ProcessadorMIPS/Waveform.vwf --testbench_file=/home/arqcomp/Documents/ProcessadorMIPS/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/arqcomp/Documents/ProcessadorMIPS/simulation/qsim/ MIPS -c MIPS
 
 
 

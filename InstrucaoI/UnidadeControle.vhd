@@ -24,6 +24,7 @@ architecture comportamento of UnidadeControle is
 -- beq = 000010
 	 
 begin
+
 	hab_escrita_mem <= '1' when (enable_decoder = "111") AND (enable_geral = '0') else '0';
 	hab_escrita_reg <= '1' when (enable_decoder = "001") AND (enable_geral = '0') else '0';
 	hab_leitura_mem <= '1' when (enable_decoder = "001") AND (enable_geral = '0') else '0';
