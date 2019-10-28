@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity mux2x1 is
     generic (
         -- Total de bits das entradas e saidas
-        larguraDados    : natural  :=   8
+        larguraDados    : natural  :=   32
     );
     port (
         entradaA_MUX    : in  std_logic_vector(larguraDados-1 downto 0);

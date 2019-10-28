@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity R is 	
+entity MIPS is 	
     generic (
         larguraBarramentoEnderecos  : natural := 32;
         larguraBarramentoDados      : natural := 32
@@ -14,17 +14,18 @@ entity R is
     port
     (	  
 		  clk						  : IN STD_LOGIC;
-		  controle				  : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		  controle				  : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
 		  opcode					  : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 		  funct					  : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
 		  
     );
 end entity;
 
-architecture estrutural of R is
+architecture estrutural of MIPS is
 
     -- Declaração de sinais auxiliares
 	 signal saidaULA, saidaPC, saidaINC, saidaROM, saidaBanco1, saidaBanco2 : STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+	 signal Z_ULA : std_logic;
      
     -- ...
 
@@ -40,7 +41,7 @@ begin
         enderecoB       => saidaROM(20 DOWNTO 16),
         enderecoC       => saidaROM(15 DOWNTO 11),
         dadoEscritaC    => saidaULA,
-        escreveC        => controle(0),
+        escreveC        => controle(10),
         saidaA          => saidaBanco1,
         saidaB          => saidaBanco2
     );
@@ -50,8 +51,9 @@ begin
 	port map (
 		A			=> saidaBanco1,
 		B			=> saidaBanco2,
-		OP       => controle(2 downto 0),
-		S			=> saidaULA
+		OP       => controle(8 downto 5),
+		S			=> saidaULA,
+		Z        => Z_ULA
 	);
 
     -- Instanciação de MUX

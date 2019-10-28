@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Thu Oct 24 15:44:26 2019
+Mon Oct 28 20:03:11 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS
+ 10. Parameter Settings for User Entity Instance: bancoRegistradores:bancoRegistradores
+ 11. Parameter Settings for User Entity Instance: ula:ULA
+ 12. Parameter Settings for User Entity Instance: romMif:ROM
+ 13. Parameter Settings for User Entity Instance: somador:SOMADOR
+ 14. Parameter Settings for User Entity Instance: pc:PC
+ 15. Port Connectivity Checks: "romMif:ROM"
+ 16. Port Connectivity Checks: "ula:ULA"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +50,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Oct 24 15:44:26 2019           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 28 20:03:10 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MIPS                                        ;
 ; Top-level Entity Name              ; MIPS                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 24                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -145,8 +159,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -156,42 +170,264 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                          ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
+; somador.vhd                      ; yes             ; User VHDL File  ; //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/somador.vhd            ;         ;
+; romMif.vhd                       ; yes             ; User VHDL File  ; //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/romMif.vhd             ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/bancoRegistradores.vhd ;         ;
+; pc.vhd                           ; yes             ; User VHDL File  ; //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/pc.vhd                 ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/ULA.vhd                ;         ;
+; MIPS.vhd                         ; yes             ; User VHDL File  ; //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd               ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 24    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 24    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |MIPS                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |MIPS               ; MIPS        ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |MIPS ;
++----------------------------+-------+---------------------------------+
+; Parameter Name             ; Value ; Type                            ;
++----------------------------+-------+---------------------------------+
+; larguraBarramentoEnderecos ; 32    ; Signed Integer                  ;
+; larguraBarramentoDados     ; 32    ; Signed Integer                  ;
++----------------------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bancoRegistradores:bancoRegistradores ;
++---------------------+-------+------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                 ;
++---------------------+-------+------------------------------------------------------+
+; larguradados        ; 32    ; Signed Integer                                       ;
+; larguraendbancoregs ; 5     ; Signed Integer                                       ;
++---------------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ula:ULA ;
++------------------------+-------+---------------------+
+; Parameter Name         ; Value ; Type                ;
++------------------------+-------+---------------------+
+; largurabarramentodados ; 32    ; Signed Integer      ;
++------------------------+-------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: romMif:ROM ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; datawidth      ; 32    ; Signed Integer                 ;
+; addrwidth      ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somador:SOMADOR ;
++----------------------------+-------+-------------------------+
+; Parameter Name             ; Value ; Type                    ;
++----------------------------+-------+-------------------------+
+; largurabarramentoenderecos ; 32    ; Signed Integer          ;
+; incremento                 ; 4     ; Signed Integer          ;
++----------------------------+-------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Parameter Settings for User Entity Instance: pc:PC ;
++------------------------+-------+-------------------+
+; Parameter Name         ; Value ; Type              ;
++------------------------+-------+-------------------+
+; largurabarramentodados ; 32    ; Signed Integer    ;
++------------------------+-------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "romMif:ROM"                                                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; dado[31..26] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dado[10..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:ULA"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Oct 24 15:44:08 2019
+    Info: Processing started: Mon Oct 28 20:02:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
-    Info (12022): Found design unit 1: somador-comportamento File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/somador.vhd Line: 18
-    Info (12023): Found entity 1: somador File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/somador.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file romMif.vhd
-    Info (12022): Found design unit 1: romMif-initFileROM File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 20
-    Info (12023): Found entity 1: romMif File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/bancoRegistradores.vhd Line: 30
-    Info (12023): Found entity 1: bancoRegistradores File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/bancoRegistradores.vhd Line: 7
+    Info (12022): Found design unit 1: somador-comportamento File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/somador.vhd Line: 18
+    Info (12023): Found entity 1: somador File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/somador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file rommif.vhd
+    Info (12022): Found design unit 1: romMif-initFileROM File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 20
+    Info (12023): Found entity 1: romMif File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/bancoRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: mux2x1-comportamento File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/mux.vhd Line: 18
-    Info (12023): Found entity 1: mux2x1 File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/mux.vhd Line: 4
+    Info (12022): Found design unit 1: mux2x1-comportamento File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/mux.vhd Line: 18
+    Info (12023): Found entity 1: mux2x1 File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/mux.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: pc-arch File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/pc.vhd Line: 16
-    Info (12023): Found entity 1: pc File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/pc.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
-    Info (12022): Found design unit 1: ULA-functions File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/ULA.vhd Line: 27
-    Info (12023): Found entity 1: ula File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/ULA.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file MIPS.vhd
-    Info (12022): Found design unit 1: R-estrutural File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 24
-    Info (12023): Found entity 1: R File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 9
-Error (10381): VHDL Type Mismatch error at MIPS.vhd(53): indexed name returns a value whose type does not match "std_logic_vector", the type of the target expression File: /home/arqcomp/Documents/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 53
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 955 megabytes
-    Error: Processing ended: Thu Oct 24 15:44:26 2019
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:20
+    Info (12022): Found design unit 1: pc-arch File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/pc.vhd Line: 16
+    Info (12023): Found entity 1: pc File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/pc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-functions File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/ULA.vhd Line: 27
+    Info (12023): Found entity 1: ula File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/ULA.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
+    Info (12022): Found design unit 1: MIPS-estrutural File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 24
+    Info (12023): Found entity 1: MIPS File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file estensor.vhd
+    Info (12022): Found design unit 1: estensor-comportamento File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/estensor.vhd Line: 16
+    Info (12023): Found entity 1: estensor File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/estensor.vhd Line: 4
+Info (12127): Elaborating entity "MIPS" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(18): used implicit default value for signal "opcode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(19): used implicit default value for signal "funct" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at MIPS.vhd(28): object "Z_ULA" assigned a value but never read File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 28
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:bancoRegistradores" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 34
+Info (12128): Elaborating entity "ula" for hierarchy "ula:ULA" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 49
+Info (12128): Elaborating entity "romMif" for hierarchy "romMif:ROM" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 60
+Warning (10639): VHDL warning at romMif.vhd(22): constant value overflow File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 22
+Warning (10445): VHDL Subtype or Type Declaration warning at romMif.vhd(22): subtype or type has null range File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at romMif.vhd(23): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/romMif.vhd Line: 23
+Info (12128): Elaborating entity "somador" for hierarchy "somador:SOMADOR" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 71
+Info (12128): Elaborating entity "pc" for hierarchy "pc:PC" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 80
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "opcode[0]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+    Warning (13410): Pin "opcode[1]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+    Warning (13410): Pin "opcode[2]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+    Warning (13410): Pin "opcode[3]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+    Warning (13410): Pin "opcode[4]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+    Warning (13410): Pin "opcode[5]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 18
+    Warning (13410): Pin "funct[0]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+    Warning (13410): Pin "funct[1]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+    Warning (13410): Pin "funct[2]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+    Warning (13410): Pin "funct[3]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+    Warning (13410): Pin "funct[4]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+    Warning (13410): Pin "funct[5]" is stuck at GND File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 19
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 16
+    Warning (15610): No output dependent on input pin "controle[0]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[1]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[2]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[3]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[4]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[5]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[6]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[7]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[8]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[9]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+    Warning (15610): No output dependent on input pin "controle[10]" File: //Mac/Home/Documents/Insper6/Design de computadores/ProcessadorMIPS/InstrucaoI/MIPS.vhd Line: 17
+Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 12 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Mon Oct 28 20:03:11 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:21
 
 
