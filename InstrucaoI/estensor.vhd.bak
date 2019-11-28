@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity estensor is
+    generic (
+        -- Total de bits das entradas e saidas
+        larguraDados    : natural  :=   16
+    );
+    port (
+        entrada16    : in  std_logic_vector(larguraDados-1 downto 0);
+
+        saida16   : out std_logic_vector(31 downto 0)
+    );
+end entity;
+
+architecture comportamento of mux2x1 is
+begin
+
+
+saida_MUX <= entradaA_MUX when seletor_MUX='0' else entradaB_MUX;
+
+end architecture;

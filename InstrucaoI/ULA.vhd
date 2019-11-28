@@ -15,7 +15,7 @@ entity ula is
 		-- Input ports
 		A	: in  std_logic_vector(larguraBarramentoDados-1 DOWNTO 0);
 		B	: in   std_logic_vector(larguraBarramentoDados-1 DOWNTO 0);
-		OP	: in std_logic_vector(1 DOWNTO 0);
+		OP	: in std_logic_vector(3 DOWNTO 0);
 
 		-- Output ports
 		S	: out std_logic_vector(larguraBarramentoDados-1 DOWNTO 0);
@@ -28,13 +28,13 @@ architecture functions of ULA is
 
 
 --constant CMPNE : std_logic_vector(1 downto 0) := "10";
-constant CMPE : std_logic_vector(1 downto 0) := "11";
+constant CMPE : std_logic_vector(3 downto 0) := "0010";
 
 signal igual : std_logic;
-signal soma : std_logic_vector(7 downto 0);
-signal sub : std_logic_vector(7 downto 0);
+signal soma : std_logic_vector(31 downto 0);
+signal sub : std_logic_vector(31 downto 0);
 --signal passaA : std_logic_vector(7 downto 0);
-signal zero : std_logic_vector(7 downto 0);
+signal zero : std_logic_vector(31 downto 0);
 
 begin
 
@@ -44,11 +44,11 @@ begin
 			
 	soma <= std_logic_vector(unsigned(A) + unsigned(B));
 	sub <= std_logic_vector(unsigned(A) - unsigned(B));
-	zero <= "00000000";
+	zero <= "00000000000000000000000000000000";
 	
 	with OP select
-	S <= 	soma when "00",
-			sub when "01",
+	S <= 	soma when "0000",
+			sub when "0001",
 			zero when others;
 	
 			
@@ -57,6 +57,7 @@ begin
 	igual <= '1' when A=B else '0';
 	
 	with OP select
-	Z <= not igual when CMPE;
+	Z <= igual when CMPE,
+	'0' when others;
 	
 end architecture;
