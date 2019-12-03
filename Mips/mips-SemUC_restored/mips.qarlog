@@ -1,0 +1,47 @@
+Quartus Prime Archive log --	C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/mips.qarlog
+
+Archive:	C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/mips.qar
+Date:		Tue Dec 03 18:44:46 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/ROM.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Registrador.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/UC_ULA.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/ULA.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform1.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform2.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform3.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform4.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform5.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform6.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform7.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform8.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform9.vwf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/assignment_defaults.qdf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/bancoRegistradores.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/clock_generator.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/constantesMIPS.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/conversorHex7Seg.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/edgeDetector.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/estendeSinalGenerico.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/fluxo_dados.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/mips.qpf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/mips.qsf
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/mips.sdc
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/mips.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/muxGenerico2.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/muxGenerico2_1bit.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/muxGenerico4.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/registradorClock.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/shift2.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/shift2_imediato.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/single_port_RAM.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/soma4.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/somador.vhd
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/uc.vhd
+	======= Total: 36 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

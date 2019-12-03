@@ -38,12 +38,12 @@ begin
 	 case ctr is
 	    when "0010" => C_s <= soma;
 	    when "0110" => C_s <= sub;
-       	when "0000" => C_s <= and1;
+       when "0000" => C_s <= and1;
 	    when "0001" => C_s <= or1;
-		when "0111" => C_s <= slt;
+		 when "0111" => C_s <= slt;
 	    when others => C_s <= zero;
     end case;
-	end process;
+	 end process;
 	
 	Z <= '1' when unsigned(sub) = unsigned(zero) else '0';
 	overflow_s <= (not(A(NUM_BITS-1)) and not(B(NUM_BITS-1)) and C_s(NUM_BITS-1)) or (A(NUM_BITS-1) and B(NUM_BITS-1) and not(C_s(NUM_BITS-1)));

@@ -6,7 +6,7 @@ package constantesMIPS is
 
   constant FUNCT_WIDTH : natural := 6;
   constant OPCODE_WIDTH : natural := 6;
-  constant CONTROLWORD_WIDTH : natural := 11;
+  constant CONTROLWORD_WIDTH : natural := 17;
   constant DATA_WIDTH : natural := 32;
   constant ADDR_WIDTH : natural := 32;
   constant REGBANK_ADDR_WIDTH : natural := 5;
@@ -28,14 +28,23 @@ package constantesMIPS is
     constant functAND : funct_t := "100100";
     constant functOR  : funct_t := "100101";
     constant functSLT : funct_t := "101010";
+	 constant functJR  : funct_t := "001000";
 
     constant opCodeTipoR         : opCode_t := "000000";
 --
     constant opCodeLW            : opCode_t := "100011";
     constant opCodeSW            : opCode_t := "101011";
     constant opCodeBEQ           : opCode_t := "000100";
---
+	 constant opCodeORI           : opCode_t := "001101";
+	 constant opCodeANDI          : opCode_t := "001100";
+	 constant opCodeADDI				: opCode_t := "001000";
+	 constant opCodeSLTI          : opCode_t := "001010";
+	 constant opCodeBNE           : opCode_t := "000101";
+	 constant opCodeLUI           : opCode_t := "001111";
+	 constant opCodeJAL           : opCode_t := "000011";
+--  
     constant opCodeTipoJ         : opCode_t := "000010";
+	 
 
     -- ALU ---
     constant readFunctULA : aluOp_t := "000";
@@ -44,7 +53,7 @@ package constantesMIPS is
     constant aluOpAnd : aluOp_t := "011";
     constant aluOpOr  : aluOp_t := "100";
     constant aluOpSlt : aluOp_t := "101";
-    constant aluOpDC : aluOp_t := "XXX";
+    constant aluOpDC  : aluOp_t := "XXX";
 
     -- ALUctr:
     -- 3: inverteA
@@ -68,7 +77,7 @@ package constantesMIPS is
     -- 1: sel_mux_beq:          0 PC+4  1 PC+4+imediato
     -- 0: sel_mux_jump:         0 saida mux_beq 1 PC+4 & imediato
 
--- ControlWorld Bit:    10-8        7             6             5               4                3                 2                 1               0
+-- ControlWorld Bit:    16-14        10             9             8               6                4                 3                 2               0
 --Instrução  Opcode     ALUop   escreve_RC   escreve_RAM   leitura_RAM   sel_mux_ula_mem   sel_mux_rd_rt   sel_mux_banco_ula    sel_mux_beq     sel_mux_jump
 --Tipo R    |00.0000  | read  |     1      |      0      |      X      |        0        |       1       |         0         |       0       |       0       |
 --J         |00.0010  | X     |     0      |      0      |      X      |        X        |       X       |         X         |       0       |       1       |
@@ -76,14 +85,27 @@ package constantesMIPS is
 --LW        |10.0011  | add   |     1      |      0      |      1      |        1        |       0       |         1         |       0       |       0       |
 --SW        |10.1011  | add   |     0      |      1      |      X      |        X        |       X       |         1         |       0       |       0       |
 
+-- bit 11 = extendeSinalZero
+-- bit 12 = BNE
+-- bit 13 = lui
+-- bit 7 = ula_mem
+-- bit 5 = sel_mux_rd_rt
+-- bit 1 = sel_mux_jump
 --  Mux1: mux([PC+4, BEQ]/J);  Mux2: mux(Rt/Rd); Mux3: mux(Rt/imediato);  Mux4: mux(ULA/mem).
 
-    constant ctrlTipoR:      ctrlWorld_t := readFunctULA & "10X01000";
-    constant ctrlTipoJ:      ctrlWorld_t := aluOpDC & "00XXXX01";
-    constant ctrlTipoBEQ:    ctrlWorld_t := aluOpSub & "00XXX010";
-    constant ctrlTipoLW:     ctrlWorld_t := aluOpAdd & "10110100";
-    constant ctrlTipoSW:     ctrlWorld_t := aluOpAdd & "01XXX100";
-	
-
+    constant ctrlTipoR:      ctrlWorld_t := readFunctULA & "00010X00010000";
+    constant ctrlTipoJ:      ctrlWorld_t := aluOpDC  &     "00000XX0X0X001";
+    constant ctrlTipoBEQ:    ctrlWorld_t := aluOpSub &     "00000XX0X00100";
+    constant ctrlTipoLW:     ctrlWorld_t := aluOpAdd &     "00010110001000";
+    constant ctrlTipoSW:     ctrlWorld_t := aluOpAdd &     "00001XX0X01000";
+	 constant ctrlTipoORI:    ctrlWorld_t := aluOpOr  &     "00110000001000";
+	 constant ctrlTipoANDI:   ctrlWorld_t := aluOpAnd &     "00110000001000";
+	 constant ctrlTipoADDI:   ctrlWorld_t := aluOpAdd &     "00010000001000";
+	 constant ctrlTipoSLTI:   ctrlWorld_t := aluOpSLT &     "00010000001000";
+	 constant ctrlTipoBNE:    ctrlWorld_t := aluOpSub &     "01000000000000";
+	 constant ctrlTipoLUI:    ctrlWorld_t := aluOpSub &     "10010000000000";
+	 constant ctrlTipoJAL:    ctrlWorld_t := aluOpSub &     "00010011111001";
+	 constant ctrlTipoJR:     ctrlWorld_t := aluOpSub &     "00000000000011";
+	 
 end package constantesMIPS;
 

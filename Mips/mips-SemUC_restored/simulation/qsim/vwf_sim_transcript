@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source="C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/Waveform1.vwf" --testbench_file="C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source="C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform9.vwf" --testbench_file="C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/Waveform9.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,22 +25,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Nov 19 15:00:58 2019
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source="C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/Waveform1.vwf" --testbench_file="C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/Waveform1.vwf.vht"
+    Info: Processing started: Tue Dec 03 17:29:58 2019
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source="C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform9.vwf" --testbench_file="C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/Waveform9.vwf.vht"
 
-vector source file when writing test bench files
-
-A Netlist Writer was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 4647 megabytes
-    Info: Processing ended: Tue Nov 19 15:01:00 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+ in vector source file when writing test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/" mips -c mips
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/" mips -c mips
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -58,20 +52,20 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Nov 19 15:01:00 2019
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/" mips -c mips
-Info (204019): Generated file mips.vho in folder "C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Tue Dec 03 17:29:59 2019
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/" mips -c mips
+Info (204019): Generated file mips.vho in folder "C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4661 megabytes
-    Info: Processing ended: Tue Nov 19 15:01:02 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Tue Dec 03 17:30:00 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/mips.do generated.
+C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/mips.do generated.
 
 Completed successfully. 
 
@@ -85,17 +79,13 @@ Reading D:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 
 
 # do mips.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:01:05 on Nov 19,2019
+# Start time: 17:30:01 on Dec 03,2019
 # vcom -work work mips.vho 
-
 # -- Loading package STANDARD
 
 # -- Loading package TEXTIO
-
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
@@ -103,29 +93,28 @@ Reading D:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
 # -- Compiling entity mips
 # -- Compiling architecture structure of mips
 
-# End time: 15:01:07 on Nov 19,2019, Elapsed time: 0:00:02
+# End time: 17:30:02 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:01:07 on Nov 19,2019
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 17:30:02 on Dec 03,2019
+# vcom -work work Waveform9.vwf.vht 
 # -- Loading package STANDARD
 
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mips_vhd_vec_tst
-
 # -- Compiling architecture mips_arch of mips_vhd_vec_tst
-# End time: 15:01:07 on Nov 19,2019, Elapsed time: 0:00:00
+# End time: 17:30:02 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mips_vhd_vec_tst 
-# Start time: 15:01:07 on Nov 19,2019
+# Start time: 17:30:02 on Dec 03,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -141,36 +130,34 @@ Reading D:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 683138 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 364935 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
 
-# Simulation time: 0 ps
+# Simulation time: 100000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 100000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 1000000 ps
 
-# Simulation time: 0 ps
-
-# End time: 15:01:21 on Nov 19,2019, Elapsed time: 0:00:14
+# End time: 17:30:11 on Dec 03,2019, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/Waveform1.vwf...
+Reading C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/Waveform9.vwf...
 
-Reading C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/mips.msim.vcd...
+Reading C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/mips.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/simulation/qsim/mips_20191119150121.sim.vwf
+Writing the resulting VWF to C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/simulation/qsim/mips_20191203173011.sim.vwf
 
 Finished VCD to VWF conversion.
 

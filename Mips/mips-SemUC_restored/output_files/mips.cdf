@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/Nicolas Stegmann/Downloads/mips-SemUC_restored/output_files/") File("mips.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("C:/Users/Nicolas Stegmann/Documents/Insper/Sexto/descomp/MIPS/ProcessadorMIPS/Mips/mips-SemUC_restored/output_files/") File("mips.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

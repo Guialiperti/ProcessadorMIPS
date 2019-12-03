@@ -1,7 +1,7 @@
 # do mips.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:01:05 on Nov 19,2019
+# Start time: 17:30:01 on Dec 03,2019
 # vcom -work work mips.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity mips
 # -- Compiling architecture structure of mips
-# End time: 15:01:07 on Nov 19,2019, Elapsed time: 0:00:02
+# End time: 17:30:02 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:01:07 on Nov 19,2019
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 17:30:02 on Dec 03,2019
+# vcom -work work Waveform9.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mips_vhd_vec_tst
 # -- Compiling architecture mips_arch of mips_vhd_vec_tst
-# End time: 15:01:07 on Nov 19,2019, Elapsed time: 0:00:00
+# End time: 17:30:02 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mips_vhd_vec_tst 
-# Start time: 15:01:07 on Nov 19,2019
+# Start time: 17:30:02 on Dec 03,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -45,16 +45,15 @@
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 683138 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 364935 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# End time: 15:01:21 on Nov 19,2019, Elapsed time: 0:00:14
+# Simulation time: 100000 ps
+# Simulation time: 100000 ps
+# Simulation time: 1000000 ps
+# End time: 17:30:11 on Dec 03,2019, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 1
